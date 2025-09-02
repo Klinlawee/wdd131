@@ -1,4 +1,4 @@
-/* Base CSS Styles for WDD 131 Course Landing Page */
+/* Professional CSS Styles for WDD 131 Course Landing Page */
 
 * {
     margin: 0;
@@ -9,16 +9,17 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #dcdfe4 0%, #bcbfc5 100%);
+    color: #2d3748;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
 }
 
 header {
-    background: #2c5aa0;
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
     color: white;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 #course-title {
@@ -27,10 +28,15 @@ header {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .name-highlight {
-    color: #ffd700;
+    color: #f6ad55;
+    background: linear-gradient(45deg, #f6ad55, #ed8936);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 nav {
@@ -40,7 +46,10 @@ nav {
     gap: 0;
     max-width: 1000px;
     margin: 0 auto;
-    background: #374f7a;
+    background: rgba(45, 55, 72, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 nav a {
@@ -49,17 +58,34 @@ nav a {
     padding: 1rem 2rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    border-right: 1px solid #2c5aa0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     flex: 1;
     text-align: center;
+    position: relative;
 }
 
 nav a:last-child {
     border-right: none;
 }
 
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #f6ad55, #ed8936);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::before {
+    width: 80%;
+}
+
 nav a:hover {
-    background: #2c5aa0;
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
 
@@ -71,87 +97,135 @@ main {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
     margin: 2rem 0;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
-    background: #2c5aa0;
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.card:hover .card-header::before {
+    left: 100%;
 }
 
 .card h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card-content {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .about-section {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .profile-image {
-    width: 120px;
-    height: 140px;
-    border-radius: 10px;
+    width: 130px;
+    height: 150px;
+    border-radius: 15px;
     object-fit: cover;
     flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 3px solid #f6ad55;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
 }
 
 .about-text {
     flex: 1;
-    line-height: 1.6;
-    color: #444;
+    line-height: 1.7;
+    color: #4a5568;
+    font-size: 1rem;
 }
 
 .location-section h3 {
-    color: #2c5aa0;
+    color: #4a5568;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
+    position: relative;
+}
+
+.location-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #f6ad55, #ed8936);
+    border-radius: 2px;
 }
 
 .flag-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
 }
 
 .ghana-flag {
-    width: 80px;
-    height: 55px;
+    width: 90px;
+    height: 60px;
     position: relative;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ghana-flag:hover {
+    transform: scale(1.1);
 }
 
 .flag-red-top {
@@ -167,8 +241,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 14px;
     color: #000;
+    font-weight: bold;
 }
 
 .flag-green-bottom {
@@ -179,14 +254,15 @@ main {
 
 .flag-caption {
     font-size: 0.9rem;
-    color: #666;
+    color: #718096;
     font-style: italic;
 }
 
 .location-description {
-    color: #444;
-    line-height: 1.6;
+    color: #4a5568;
+    line-height: 1.7;
     text-align: justify;
+    font-size: 0.95rem;
 }
 
 .resources-list {
@@ -195,66 +271,86 @@ main {
 }
 
 .resources-list li {
-    margin: 0.8rem 0;
-    padding-left: 1.5rem;
+    margin: 1rem 0;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
     position: relative;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 10px;
+    border-left: 4px solid #f6ad55;
+    transition: all 0.3s ease;
+}
+
+.resources-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .resources-list li:before {
     content: "▶";
     position: absolute;
-    left: 0;
-    color: #2c5aa0;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a5568;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .resources-list a {
-    color: #2c5aa0;
+    color: #4a5568;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    display: block;
 }
 
 .resources-list a:hover {
-    color: #1e3a72;
+    color: #2d3748;
     text-decoration: underline;
 }
 
 footer {
-    background: #1e3a72;
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
     color: white;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
 }
 
 footer p {
-    margin: 0.5rem 0;
+    margin: 0.8rem 0;
+    font-size: 1rem;
 }
 
 .footer-emoji {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
 }
 
 #lastModified {
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    color: #cbd5e0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     #course-title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        padding: 0 1rem;
     }
 
     nav {
         flex-direction: column;
+        margin: 1rem;
     }
 
     nav a {
         border-right: none;
-        border-bottom: 1px solid #2c5aa0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.2rem;
     }
 
     nav a:last-child {
@@ -263,18 +359,38 @@ footer p {
 
     .cards-container {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .about-section {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
     }
 
     .profile-image {
         align-self: center;
+        width: 120px;
+        height: 140px;
     }
 
     .flag-container {
         justify-content: center;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #course-title {
+        font-size: 1.2rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 1rem 0;
     }
 }
