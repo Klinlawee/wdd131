@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A responsive temple album page showcasing beautiful LDS temples from around the world">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Temple Album</div>
+            <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+            <nav id="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">Old</a>
+                <a href="#">New</a>
+                <a href="#">Large</a>
+                <a href="#">Small</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Sacred Spaces</h1>
+        <div class="temple-grid">
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/800x500/san-diego-temple-765109-wallpaper.jpg" alt="San Diego California Temple" loading="lazy">
+                <figcaption>San Diego California Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/800x500/salt-lake-temple-37762.jpg" alt="Salt Lake Temple" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mesa-arizona/800x500/mesa_arizona_temple.jpg" alt="Mesa Arizona Temple" loading="lazy">
+                <figcaption>Mesa Arizona Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-d-c/800x500/washington_dc_temple-exterior-2.jpg" alt="Washington D.C. Temple" loading="lazy">
+                <figcaption>Washington D.C. Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/laie-hawaii/800x500/laie-temple-775370-wallpaper.jpg" alt="Laie Hawaii Temple" loading="lazy">
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/800x500/rome-italy-temple-lds-1072897-wallpaper.jpg" alt="Rome Italy Temple" loading="lazy">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/800x500/paris-france-temple-evening-1072824-wallpaper.jpg" alt="Paris France Temple" loading="lazy">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/london-england/800x500/london-england-temple-lds-753999-wallpaper.jpg" alt="London England Temple" loading="lazy">
+                <figcaption>London England Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/800x500/tokyo-japan-temple-lds-993617-wallpaper.jpg" alt="Tokyo Japan Temple" loading="lazy">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Temple Album. All rights reserved.</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
