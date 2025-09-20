@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghana - Country Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --color-red: #CF0921;     /* Red from Ghana flag */
@@ -14,7 +15,7 @@
             --color-background: #f5f5f5;
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         * {
@@ -27,42 +28,87 @@
             font-family: var(--font-main);
             line-height: 1.6;
             color: var(--color-text);
-            background-color: var(--color-background);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
             padding: 0;
             margin: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         header {
-            background: linear-gradient(to right, var(--color-red), var(--color-yellow), var(--color-green));
-            color: white;
+            background: white;
             text-align: center;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
             position: relative;
             overflow: hidden;
         }
 
-        header::before {
-            content: "★";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            color: var(--color-black);
-            opacity: 0.2;
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            color: var(--color-green);
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--color-red);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* Ghana Flag Design */
+        .ghana-flag {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            border: 2px solid #333;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .flag-stripe {
+            height: 33.33%;
+            width: 100%;
+        }
+        
+        .red-stripe {
+            background-color: var(--color-red);
+        }
+        
+        .yellow-stripe {
+            background-color: var(--color-yellow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .green-stripe {
+            background-color: var(--color-green);
+        }
+        
+        .black-star {
+            color: var(--color-black);
+            font-size: 40px;
+            text-shadow: 0 0 4px rgba(255,255,255,0.5);
         }
 
         main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
+            margin-bottom: 2rem;
         }
 
         .hero {
@@ -84,10 +130,16 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
             color: white;
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: center;
+        }
+
+        .hero-overlay h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
         }
 
         .content {
@@ -105,23 +157,36 @@
 
         .data, .weather {
             background-color: white;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .data:hover, .weather:hover {
+            transform: translateY(-5px);
         }
 
         h2 {
             color: var(--color-green);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-yellow);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-yellow);
             position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 i {
+            margin-right: 10px;
+            color: var(--color-red);
         }
 
         .weather h2::after {
             content: "⛅";
             position: absolute;
             right: 0;
+            font-size: 1.8rem;
         }
 
         ul {
@@ -129,14 +194,20 @@
         }
 
         li {
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
             position: relative;
             display: flex;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        li:last-child {
+            border-bottom: none;
         }
 
         li strong {
-            min-width: 120px;
+            min-width: 140px;
             color: var(--color-red);
         }
 
@@ -145,14 +216,23 @@
             color: var(--color-green);
             position: absolute;
             left: 0;
+            font-size: 1.5rem;
+            top: 0.4rem;
+        }
+
+        .weather-icon {
+            font-size: 2rem;
+            margin-right: 10px;
+            color: var(--color-yellow);
         }
 
         footer {
             background: linear-gradient(to right, var(--color-red), var(--color-yellow), var(--color-green));
             color: white;
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-radius: var(--border-radius);
         }
 
         .footer-content {
@@ -160,7 +240,7 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 1rem;
         }
 
         @media (min-width: 768px) {
@@ -170,83 +250,132 @@
             }
         }
 
-        .flag-colors {
+        .footer-content p {
+            margin: 0;
+        }
+
+        .weather-data {
             display: flex;
-            height: 10px;
-            margin-top: 0.5rem;
+            align-items: center;
+            margin-bottom: 0.5rem;
         }
 
-        .flag-red {
-            background-color: var(--color-red);
-            flex: 1;
+        .weather-value {
+            font-weight: bold;
+            color: var(--color-green);
         }
 
-        .flag-yellow {
-            background-color: var(--color-yellow);
-            flex: 1;
+        .map-container {
+            margin-top: 2rem;
+            text-align: center;
         }
 
-        .flag-green {
-            background-color: var(--color-green);
-            flex: 1;
+        .map-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, var(--color-red) 0%, var(--color-yellow) 35%, var(--color-green) 100%);
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ghana</h1>
-        <p>The Gateway to Africa</p>
-        <div class="flag-colors">
-            <div class="flag-red"></div>
-            <div class="flag-yellow"></div>
-            <div class="flag-green"></div>
-        </div>
-    </header>
-
-    <main>
-        <div class="hero">
-            <picture>
-                <source srcset="https://placehold.co/1200x600/CF0921/FFFFFF/webp?text=Ghana+Landscape" type="image/webp">
-                <img src="https://placehold.co/1200x600/CF0921/FFFFFF/jpeg?text=Ghana+Landscape" alt="Beautiful landscape of Ghana with coastal views and mountains" width="1200" height="600">
-            </picture>
-            <div class="hero-overlay">
-                <p>Beautiful landscapes, rich culture, and vibrant cities</p>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <!-- Ghana Flag -->
+                <div class="ghana-flag">
+                    <div class="flag-stripe red-stripe"></div>
+                    <div class="flag-stripe yellow-stripe">
+                        <div class="black-star">★</div>
+                    </div>
+                    <div class="flag-stripe green-stripe"></div>
+                </div>
+                <h1>Ghana</h1>
+                <p class="tagline">The Gateway to Africa</p>
             </div>
-        </div>
+        </header>
 
-        <div class="content">
-            <section class="data">
-                <h2>Data</h2>
-                <ul>
-                    <li><strong>Area:</strong> 239,567 km²</li>
-                    <li><strong>Population:</strong> 32.83 million</li>
-                    <li><strong>Capital:</strong> Accra</li>
-                    <li><strong>Languages:</strong> English, Akan, Ewe, Ga</li>
-                    <li><strong>Currency:</strong> Ghana Cedi (GHS)</li>
-                    <li><strong>Time Zone:</strong> UTC+0 (GMT)</li>
-                    <li><strong>Calling Code:</strong> +233</li>
-                    <li><strong>Internet TLD:</strong> .gh</li>
-                </ul>
-            </section>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source srcset="https://images.unsplash.com/photo-1583508912123-50b6b2f7c8dd?ixlib=rb-4.0.3&fm=webp&w=1200&h=600&fit=crop" type="image/webp">
+                    <img src="https://images.unsplash.com/photo-1583508912123-50b6b2f7c8dd?ixlib=rb-4.0.3&w=1200&h=600&fit=crop" alt="Beautiful landscape of Ghana with coastal views and mountains" width="1200" height="600">
+                </picture>
+                <div class="hero-overlay">
+                    <h2>Discover Ghana</h2>
+                    <p>Beautiful landscapes, rich culture, and vibrant cities</p>
+                </div>
+            </div>
 
-            <section class="weather">
-                <h2>Weather</h2>
-                <ul>
-                    <li><strong>Temperature:</strong> 28°C</li>
-                    <li><strong>Condition:</strong> Partly Cloudy</li>
-                    <li><strong>Wind:</strong> 8 km/h</li>
-                    <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
-                </ul>
-            </section>
-        </div>
-    </main>
+            <div class="content">
+                <section class="data">
+                    <h2><i class="fas fa-info-circle"></i> Country Data</h2>
+                    <ul>
+                        <li><strong>Area:</strong> 239,567 km²</li>
+                        <li><strong>Population:</strong> 32.83 million</li>
+                        <li><strong>Capital:</strong> Accra</li>
+                        <li><strong>Languages:</strong> English, Akan, Ewe, Ga</li>
+                        <li><strong>Currency:</strong> Ghana Cedi (GHS)</li>
+                        <li><strong>Time Zone:</strong> UTC+0 (GMT)</li>
+                        <li><strong>Calling Code:</strong> +233</li>
+                        <li><strong>Internet TLD:</strong> .gh</li>
+                    </ul>
+                </section>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; <span id="currentyear"></span> Ghana Information Page</p>
-            <p>Last Modified: <span id="lastmodified"></span></p>
-        </div>
-    </footer>
+                <section class="weather">
+                    <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
+                    <div class="weather-data">
+                        <i class="fas fa-temperature-high weather-icon"></i>
+                        <div>
+                            <strong>Temperature:</strong> 
+                            <span class="weather-value">28°C</span>
+                        </div>
+                    </div>
+                    <div class="weather-data">
+                        <i class="fas fa-cloud weather-icon"></i>
+                        <div>
+                            <strong>Condition:</strong> 
+                            <span class="weather-value">Partly Cloudy</span>
+                        </div>
+                    </div>
+                    <div class="weather-data">
+                        <i class="fas fa-wind weather-icon"></i>
+                        <div>
+                            <strong>Wind:</strong> 
+                            <span class="weather-value">8 km/h</span>
+                        </div>
+                    </div>
+                    <div class="weather-data">
+                        <i class="fas fa-wind weather-icon"></i>
+                        <div>
+                            <strong>Wind Chill:</strong> 
+                            <span class="weather-value" id="windchill">N/A</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="map-container">
+                <h2><i class="fas fa-map-marked-alt"></i> Ghana Location Map</h2>
+                <div class="map-placeholder">
+                    Ghana is located on the west coast of Africa
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="currentyear"></span> Ghana Information Page</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+        </footer>
+    </div>
 
     <script>
         // Set footer content
