@@ -117,11 +117,13 @@
             overflow: hidden;
             box-shadow: var(--box-shadow);
             position: relative;
+            height: 400px;
         }
 
-        .hero picture img {
+        .hero-image {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
 
@@ -315,10 +317,7 @@
 
         <main>
             <div class="hero">
-                <picture>
-                    <source srcset="https://images.unsplash.com/photo-1583508912123-50b6b2f7c8dd?ixlib=rb-4.0.3&fm=webp&w=1200&h=600&fit=crop" type="image/webp">
-                    <img src="https://images.unsplash.com/photo-1583508912123-50b6b2f7c8dd?ixlib=rb-4.0.3&w=1200&h=600&fit=crop" alt="Beautiful landscape of Ghana with coastal views and mountains" width="1200" height="600">
-                </picture>
+                <img src="https://images.unsplash.com/photo-1556244575-e9e80b460eed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Beautiful landscape of Ghana with coastal views and mountains" class="hero-image">
                 <div class="hero-overlay">
                     <h2>Discover Ghana</h2>
                     <p>Beautiful landscapes, rich culture, and vibrant cities</p>
