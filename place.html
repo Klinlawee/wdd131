@@ -189,35 +189,47 @@
             font-size: 1.8rem;
         }
 
-        ul {
+        /* Country Data List - No Bullet Points */
+        .data-list {
             list-style-type: none;
         }
 
-        li {
+        .data-list li {
             margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+        }
+
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+
+        .data-list li strong {
+            min-width: 140px;
+            color: var(--color-red);
+        }
+
+        /* Weather List */
+        .weather-list {
+            list-style-type: none;
+        }
+
+        .weather-list li {
+            margin-bottom: 1rem;
+            padding-left: 0;
             display: flex;
             padding: 0.5rem 0;
             border-bottom: 1px dashed #eee;
         }
 
-        li:last-child {
+        .weather-list li:last-child {
             border-bottom: none;
         }
 
-        li strong {
+        .weather-list li strong {
             min-width: 140px;
             color: var(--color-red);
-        }
-
-        li::before {
-            content: "•";
-            color: var(--color-green);
-            position: absolute;
-            left: 0;
-            font-size: 1.5rem;
-            top: 0.4rem;
         }
 
         .weather-icon {
@@ -316,7 +328,7 @@
             <div class="content">
                 <section class="data">
                     <h2><i class="fas fa-info-circle"></i> Country Data</h2>
-                    <ul>
+                    <ul class="data-list">
                         <li><strong>Area:</strong> 239,567 km²</li>
                         <li><strong>Population:</strong> 32.83 million</li>
                         <li><strong>Capital:</strong> Accra</li>
@@ -330,34 +342,36 @@
 
                 <section class="weather">
                     <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
-                    <div class="weather-data">
-                        <i class="fas fa-temperature-high weather-icon"></i>
-                        <div>
-                            <strong>Temperature:</strong> 
-                            <span class="weather-value">28°C</span>
-                        </div>
-                    </div>
-                    <div class="weather-data">
-                        <i class="fas fa-cloud weather-icon"></i>
-                        <div>
-                            <strong>Condition:</strong> 
-                            <span class="weather-value">Partly Cloudy</span>
-                        </div>
-                    </div>
-                    <div class="weather-data">
-                        <i class="fas fa-wind weather-icon"></i>
-                        <div>
-                            <strong>Wind:</strong> 
-                            <span class="weather-value">8 km/h</span>
-                        </div>
-                    </div>
-                    <div class="weather-data">
-                        <i class="fas fa-wind weather-icon"></i>
-                        <div>
-                            <strong>Wind Chill:</strong> 
-                            <span class="weather-value" id="windchill">N/A</span>
-                        </div>
-                    </div>
+                    <ul class="weather-list">
+                        <li>
+                            <i class="fas fa-temperature-high weather-icon"></i>
+                            <div>
+                                <strong>Temperature:</strong> 
+                                <span class="weather-value">28°C</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-cloud weather-icon"></i>
+                            <div>
+                                <strong>Condition:</strong> 
+                                <span class="weather-value">Partly Cloudy</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-wind weather-icon"></i>
+                            <div>
+                                <strong>Wind:</strong> 
+                                <span class="weather-value">8 km/h</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-wind weather-icon"></i>
+                            <div>
+                                <strong>Wind Chill:</strong> 
+                                <span class="weather-value" id="windchill">N/A</span>
+                            </div>
+                        </li>
+                    </ul>
                 </section>
             </div>
 
