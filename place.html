@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Ghana - its geography, culture, weather, and more.">
     <title>Ghana - Country Information</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -155,6 +156,14 @@
             .content {
                 grid-template-columns: 1fr 1fr;
             }
+            
+            /* Show weather emoticon only in wider view */
+            .weather h2::after {
+                content: "⛅";
+                position: absolute;
+                right: 0;
+                font-size: 1.8rem;
+            }
         }
 
         .data, .weather {
@@ -182,13 +191,6 @@
         h2 i {
             margin-right: 10px;
             color: var(--color-red);
-        }
-
-        .weather h2::after {
-            content: "⛅";
-            position: absolute;
-            right: 0;
-            font-size: 1.8rem;
         }
 
         /* Country Data List - No Bullet Points */
@@ -238,6 +240,23 @@
             font-size: 2rem;
             margin-right: 10px;
             color: var(--color-yellow);
+        }
+
+        /* SVG weather icon for mobile */
+        .svg-weather-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+            display: none; /* Hidden by default */
+        }
+
+        @media (max-width: 767px) {
+            .svg-weather-icon {
+                display: inline-block; /* Show only on mobile */
+            }
+            .weather-icon {
+                display: none; /* Hide font icon on mobile */
+            }
         }
 
         footer {
@@ -317,7 +336,13 @@
 
         <main>
             <div class="hero">
-                <img src="https://imgur.com/yVqw7mM" alt="Beautiful landscape of Ghana with coastal views and mountains" class="hero-image">
+                <!-- Hero image with srcset for responsive images -->
+                <img 
+                    src="images/ghana_west.webp" 
+                    srcset="images/ghana_west_small.webp 600w, images/ghana_west_medium.webp 900w, images/ghana_west.webp 1200w"
+                    sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, 1200px"
+                    alt="Beautiful landscape of Ghana with coastal views and mountains" 
+                    class="hero-image">
                 <div class="hero-overlay">
                     <h2>Discover Ghana</h2>
                     <p>Beautiful landscapes, rich culture, and vibrant cities</p>
@@ -343,6 +368,19 @@
                     <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
                     <ul class="weather-list">
                         <li>
+                            <!-- SVG weather icon for mobile -->
+                            <svg class="svg-weather-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15.5C14.4853 15.5 16.5 13.4853 16.5 11C16.5 8.51472 14.4853 6.5 12 6.5C9.51472 6.5 7.5 8.51472 7.5 11C7.5 13.4853 9.51472 15.5 12 15.5Z" stroke="#FCD20F" stroke-width="2"/>
+                                <path d="M12 2V4" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 18V20" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M4.92999 4.92999L6.33999 6.33999" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M17.66 17.66L19.07 19.07" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M2 12H4" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20 12H22" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M6.33999 17.66L4.92999 19.07" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M19.07 4.92999L17.66 6.33999" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <!-- Font icon for desktop -->
                             <i class="fas fa-temperature-high weather-icon"></i>
                             <div>
                                 <strong>Temperature:</strong> 
@@ -350,6 +388,13 @@
                             </div>
                         </li>
                         <li>
+                            <svg class="svg-weather-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18C9 18 7 16 7 14C7 12.3431 8.34315 11 10 11C11.6569 11 13 12.3431 13 14C13 16 11 18 11 18H9Z" stroke="#FCD20F" stroke-width="2"/>
+                                <path d="M9 18H15" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 11V10" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M14 11V10" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 9V8" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
                             <i class="fas fa-cloud weather-icon"></i>
                             <div>
                                 <strong>Condition:</strong> 
@@ -357,6 +402,12 @@
                             </div>
                         </li>
                         <li>
+                            <svg class="svg-weather-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8H13C15.2091 8 17 9.79086 17 12C17 14.2091 15.2091 16 13 16H5" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M5 12H15" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M13 8L17 4" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M13 16L17 20" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
                             <i class="fas fa-wind weather-icon"></i>
                             <div>
                                 <strong>Wind:</strong> 
@@ -364,6 +415,13 @@
                             </div>
                         </li>
                         <li>
+                            <svg class="svg-weather-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8H13C15.2091 8 17 9.79086 17 12C17 14.2091 15.2091 16 13 16H5" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M5 12H15" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M13 8L17 4" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M13 16L17 20" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M17 12H19" stroke="#FCD20F" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
                             <i class="fas fa-wind weather-icon"></i>
                             <div>
                                 <strong>Wind Chill:</strong> 
@@ -395,11 +453,8 @@
         document.getElementById('currentyear').textContent = new Date().getFullYear();
         document.getElementById('lastmodified').textContent = document.lastModified;
 
-        // Calculate wind chill
-        function calculateWindChill(temperature, windSpeed) {
-            // Using metric formula for wind chill
-            return 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
-        }
+        // Calculate wind chill - one line function
+        const calculateWindChill = (t, v) => 13.12 + (0.6215 * t) - (11.37 * Math.pow(v, 0.16)) + (0.3965 * t * Math.pow(v, 0.16));
 
         // Get weather data
         const temperature = 28; // Static temperature value in °C
@@ -408,6 +463,7 @@
         // Check if wind chill calculation is viable
         let windChillFactor = "N/A";
         
+        // Only calculate if conditions are met
         if (temperature <= 10 && windSpeed > 4.8) {
             windChillFactor = `${calculateWindChill(temperature, windSpeed).toFixed(1)}°C`;
         }
