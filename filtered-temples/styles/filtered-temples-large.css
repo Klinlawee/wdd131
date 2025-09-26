@@ -33,6 +33,15 @@
         gap: 2rem;
         margin-top: 2rem;
     }
+    
+    .temple-detail {
+        flex-direction: row;
+    }
+    
+    .temple-detail strong {
+        min-width: 120px;
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 1024px) {
