@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A responsive temple album page showcasing beautiful LDS temples from around the world">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Temple Album</div>
+            <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+            <nav id="nav-menu">
+                <a href="#" class="nav-link active" data-filter="home">Home</a>
+                <a href="#" class="nav-link" data-filter="old">Old</a>
+                <a href="#" class="nav-link" data-filter="new">New</a>
+                <a href="#" class="nav-link" data-filter="large">Large</a>
+                <a href="#" class="nav-link" data-filter="small">Small</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Sacred Spaces</h1>
+        <div class="temple-grid" id="temple-container">
+            <!-- Temple cards will be dynamically generated here -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Godson Morrison Halm 🇬🇭 Ghana</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/filtered-temples.js"></script>
+</body>
+</html>
