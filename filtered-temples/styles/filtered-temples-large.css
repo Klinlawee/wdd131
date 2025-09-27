@@ -42,16 +42,28 @@
         min-width: 120px;
         margin-bottom: 0;
     }
+    
+    .temple-image-container {
+        height: 220px;
+    }
 }
 
 @media (min-width: 1024px) {
     .temple-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .temple-image-container {
+        height: 240px;
+    }
 }
 
 @media (min-width: 1400px) {
     .temple-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .temple-image-container {
+        height: 200px;
     }
 }
