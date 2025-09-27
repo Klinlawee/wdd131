@@ -76,7 +76,7 @@ const temples = [
         location: "Accra, Ghana",
         dedicated: "2004, January, 11",
         area: 17500,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-lds-396038-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/320x180/accra-ghana-temple-detail-249022-2400x1200.jpg"
     },
     {
         templeName: "Salt Lake",
@@ -90,14 +90,14 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x225/rome-italy-temple-lds-1078084-wallpaper.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/bc/content/ldsorg/locations/visitors-centers/rome-italy-visitors-center/rome-temple-visitor-center-1.jpg"
     },
     {
         templeName: "Kirtland Ohio",
         location: "Kirtland, Ohio, United States",
         dedicated: "1836, March, 27",
         area: 15000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kirtland-ohio/400x250/kirtland-ohio-temple-lds-694082-wallpaper.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/imgs/27bfba650440ac09cd863ae4cb222d5c1ab227ca/full/1920%2C/0/default"
     },
     {
         templeName: "Atlanta Georgia",
@@ -111,14 +111,14 @@ const temples = [
         location: "Provo, Utah, United States",
         dedicated: "2016, March, 20",
         area: 85084,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/400x250/provo-city-center-temple-1178033-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/2018/800x500/Provo-City-Center-Temple08.jpg"
     },
     {
         templeName: "Provo Utah",
         location: "Provo, Utah, United States",
         dedicated: "1972, February, 9",
         area: 128969,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah/400x250/provo-utah-temple-lds-885489-wallpaper.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/imgs/15e3f7bd07d84cbff0cb7440cc9b32253706fc39/full/1920%2C/0/default"
     },
     {
         templeName: "Nauvoo Illinois",
@@ -132,7 +132,7 @@ const temples = [
         location: "San Diego, California, United States",
         dedicated: "1993, April, 25",
         area: 72000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-california-temple-lds-911997-wallpaper.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/imgs/9fc6d53550ed3243fb8eca9ebceb284d4865e7db/full/800%2C/0/default?lang=eng"
     },
     {
         templeName: "Logan Utah",
