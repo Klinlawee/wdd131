@@ -49,7 +49,6 @@ const temples = [
         area: 116642,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Additional temples
     {
         templeName: "Rome Italy",
         location: "Rome, Italy",
@@ -70,6 +69,147 @@ const temples = [
         dedicated: "1978, October, 30",
         area: 59246,
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/017-S%C3%A3o-Paulo-Brazil-Temple.jpg"
+    },
+    // New temples added below
+    {
+        templeName: "Accra Ghana",
+        location: "Accra, Ghana",
+        dedicated: "2004, January, 11",
+        area: 17500,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-lds-396038-wallpaper.jpg"
+    },
+    {
+        templeName: "Salt Lake",
+        location: "Salt Lake City, Utah, United States",
+        dedicated: "1893, April, 6",
+        area: 253000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
+    },
+    {
+        templeName: "Rome Italy",
+        location: "Rome, Italy",
+        dedicated: "2019, March, 10",
+        area: 41010,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x225/rome-italy-temple-lds-1078084-wallpaper.jpg"
+    },
+    {
+        templeName: "Kirtland Ohio",
+        location: "Kirtland, Ohio, United States",
+        dedicated: "1836, March, 27",
+        area: 15000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kirtland-ohio/400x250/kirtland-ohio-temple-lds-694082-wallpaper.jpg"
+    },
+    {
+        templeName: "Atlanta Georgia",
+        location: "Atlanta, Georgia, United States",
+        dedicated: "1983, June, 1",
+        area: 34947,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/atlanta-georgia/400x250/atlanta-georgia-temple-lds-82744-wallpaper.jpg"
+    },
+    {
+        templeName: "Provo City Center",
+        location: "Provo, Utah, United States",
+        dedicated: "2016, March, 20",
+        area: 85084,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/400x250/provo-city-center-temple-1178033-wallpaper.jpg"
+    },
+    {
+        templeName: "Provo Utah",
+        location: "Provo, Utah, United States",
+        dedicated: "1972, February, 9",
+        area: 128969,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah/400x250/provo-utah-temple-lds-885489-wallpaper.jpg"
+    },
+    {
+        templeName: "Nauvoo Illinois",
+        location: "Nauvoo, Illinois, United States",
+        dedicated: "2002, June, 27",
+        area: 54000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/400x250/nauvoo-temple-756499-wallpaper.jpg"
+    },
+    {
+        templeName: "San Diego California",
+        location: "San Diego, California, United States",
+        dedicated: "1993, April, 25",
+        area: 72000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-california-temple-lds-911997-wallpaper.jpg"
+    },
+    {
+        templeName: "Logan Utah",
+        location: "Logan, Utah, United States",
+        dedicated: "1884, May, 17",
+        area: 119236,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/logan-utah/400x250/logan-utah-temple-lds-2196399-wallpaper.jpg"
+    },
+    {
+        templeName: "St. George Utah",
+        location: "St. George, Utah, United States",
+        dedicated: "1877, April, 6",
+        area: 143969,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/st-george-utah/400x250/st-george-utah-temple-lds-956084-wallpaper.jpg"
+    },
+    {
+        templeName: "Johannesburg South Africa",
+        location: "Johannesburg, South Africa",
+        dedicated: "1985, August, 24",
+        area: 19000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-lds-786390-wallpaper.jpg"
+    },
+    {
+        templeName: "Manila Philippines",
+        location: "Manila, Philippines",
+        dedicated: "1984, September, 25",
+        area: 26783,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manila-philippines/400x250/manila-philippines-temple-lds-993617-wallpaper.jpg"
+    },
+    {
+        templeName: "Seoul Korea",
+        location: "Seoul, South Korea",
+        dedicated: "1985, December, 14",
+        area: 28057,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seoul-korea/400x250/seoul-korea-temple-lds-273986-wallpaper.jpg"
+    },
+    {
+        templeName: "Bangkok Thailand",
+        location: "Bangkok, Thailand",
+        dedicated: "2019, October, 22",
+        area: 10982,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bangkok-thailand/400x250/bangkok-thailand-temple-lds-1078085-wallpaper.jpg"
+    },
+    {
+        templeName: "Auckland New Zealand",
+        location: "Auckland, New Zealand",
+        dedicated: "1958, April, 21",
+        area: 45331,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/auckland-new-zealand/400x250/auckland-new-zealand-temple-lds-811746-wallpaper.jpg"
+    },
+    {
+        templeName: "Sydney Australia",
+        location: "Sydney, Australia",
+        dedicated: "1984, September, 20",
+        area: 30671,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sydney-australia/400x250/sydney-australia-temple-lds-767036-wallpaper.jpg"
+    },
+    {
+        templeName: "London England",
+        location: "London, England, United Kingdom",
+        dedicated: "1958, September, 7",
+        area: 42852,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/london-england/400x250/london-england-temple-lds-738089-wallpaper.jpg"
+    },
+    {
+        templeName: "Paris France",
+        location: "Paris, France",
+        dedicated: "2017, May, 21",
+        area: 44075,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-lds-1078086-wallpaper.jpg"
+    },
+    {
+        templeName: "Bern Switzerland",
+        location: "Bern, Switzerland",
+        dedicated: "1955, September, 11",
+        area: 35000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-lds-746013-wallpaper.jpg"
     }
 ];
 
