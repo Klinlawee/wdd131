@@ -62,14 +62,14 @@ const temples = [
         location: "Kyiv, Ukraine",
         dedicated: "2010, August, 29",
         area: 22000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x225/kyiv-ukraine-temple-lds-835288-wallpaper.jpg"
+        imageUrl: "https://cloudfront-us-east-1.images.arcpublishing.com/deseretnews/LT2M6KFPDJZE52Q4NXIASWTCNQ.jpg"
     },
     {
         templeName: "São Paulo Brazil",
         location: "São Paulo, Brazil",
         dedicated: "1978, October, 30",
         area: 59246,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x225/sao-paulo-brazil-temple-lds-919303-wallpaper.jpg"
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/017-S%C3%A3o-Paulo-Brazil-Temple.jpg"
     }
 ];
 
