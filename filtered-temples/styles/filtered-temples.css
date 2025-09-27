@@ -131,6 +131,8 @@ main {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .temple-card:hover {
@@ -138,14 +140,9 @@ main {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.temple-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
 .temple-info {
     padding: 1.25rem;
+    order: 1; /* Info comes first */
 }
 
 .temple-info h2 {
@@ -172,6 +169,13 @@ main {
 
 .temple-detail span {
     flex: 1;
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    order: 2; /* Image comes after info */
 }
 
 /* Footer */

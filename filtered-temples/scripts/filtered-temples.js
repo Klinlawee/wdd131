@@ -62,7 +62,7 @@ const temples = [
         location: "Kyiv, Ukraine",
         dedicated: "2010, August, 29",
         area: 22000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/800x500/kyiv-ukraine-lds-temple-771090-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x225/kyiv-ukraine-temple-lds-835288-wallpaper.jpg"
     },
     {
         templeName: "São Paulo Brazil",
@@ -89,7 +89,6 @@ lastModifiedElement.textContent = document.lastModified;
 function createTempleCard(temple) {
     return `
         <div class="temple-card">
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
             <div class="temple-info">
                 <h2>${temple.templeName}</h2>
                 <div class="temple-detail">
@@ -105,6 +104,7 @@ function createTempleCard(temple) {
                     <span>${temple.area.toLocaleString()} sq ft</span>
                 </div>
             </div>
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
         </div>
     `;
 }
