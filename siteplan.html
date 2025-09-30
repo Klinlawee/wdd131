@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Planning Document - Outdoor Adventure Hub</title>
+    <style>
+        /* Color Schema */
+        :root {
+            --primary-color: #2E8B57; /* Sea Green */
+            --secondary-color: #1E3A5F; /* Dark Blue */
+            --accent-color: #FF7F50; /* Coral */
+            --text-color: #333333;
+            --background-color: #F5F5F5;
+            --light-color: #FFFFFF;
+        }
+        
+        /* Typography */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--secondary-color);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            background-color: var(--light-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .primary-color {
+            background-color: var(--primary-color);
+        }
+        
+        .secondary-color {
+            background-color: var(--secondary-color);
+        }
+        
+        .accent-color {
+            background-color: var(--accent-color);
+        }
+        
+        .wireframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .wireframe {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+        
+        .wireframe-box {
+            border: 1px dashed #999;
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        
+        .mobile {
+            max-width: 400px;
+        }
+        
+        .desktop {
+            max-width: 800px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+        }
+        
+        /* Logo Styles */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            margin-right: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .site-title {
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+        
+        .site-subtitle {
+            color: var(--primary-color);
+            margin: 0;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo">GMK</div>
+                <div>
+                    <h1 class="site-title">Outdoor Adventure Hub</h1>
+                    <p class="site-subtitle">Your Gateway to Nature's Wonders</p>
+                </div>
+            </div>
+            <h1>Website Planning Document</h1>
+        </header>
+        
+        <div class="section">
+            <h2>Site Name</h2>
+            <p><strong>Outdoor Adventure Hub</strong> <span class="logo" style="display: inline-flex; width: 40px; height: 40px; font-size: 14px; margin-left: 10px;">GMK</span></p>
+            <p>This name was chosen because it clearly communicates the purpose of the website - to serve as a central resource for outdoor enthusiasts. The word "Hub" suggests a comprehensive, go-to destination for all things related to outdoor adventures. The GMK logo represents the founder's initials and adds a personal touch to the brand.</p>
+            <p>Optional domain availability: outdooradventurehub.com</p>
+        </div>
+        
+        <div class="section">
+            <h2>Site Purpose</h2>
+            <p>The Outdoor Adventure Hub website will provide comprehensive resources for outdoor enthusiasts including:</p>
+            <ul>
+                <li>Trail guides and hiking recommendations</li>
+                <li>Gear reviews and recommendations</li>
+                <li>Safety tips and preparation checklists</li>
+                <li>Community events and group outing information</li>
+                <li>User-submitted adventure stories and photos</li>
+            </ul>
+            <p>The site aims to be a one-stop resource for both novice and experienced outdoor adventurers looking to explore nature safely and responsibly.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Scenarios</h2>
+            <p>These scenarios represent questions from our target audience that the website content will address:</p>
+            <ol>
+                <li>I'm new to hiking and want to find easy trails near me with good scenery. What equipment do I need to get started?</li>
+                <li>I'm planning a multi-day backpacking trip in mountainous terrain. Where can I find detailed trail maps, elevation profiles, and current trail conditions?</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>Color Schema</h2>
+            <p>The selected color palette reflects the natural environment and evokes feelings of adventure and exploration:</p>
+            
+            <div class="color-swatch primary-color">Primary Color<br>#2E8B57<br>(Sea Green)</div>
+            <p><strong>Usage:</strong> Primary brand color, main headings, navigation elements, buttons, GMK logo background</p>
+            
+            <div class="color-swatch secondary-color">Secondary Color<br>#1E3A5F<br>(Dark Blue)</div>
+            <p><strong>Usage:</strong> Secondary headings, footer background, section backgrounds</p>
+            
+            <div class="color-swatch accent-color">Accent Color<br>#FF7F50<br>(Coral)</div>
+            <p><strong>Usage:</strong> Call-to-action buttons, highlights, important notifications</p>
+            
+            <p>Additional colors:</p>
+            <ul>
+                <li><strong>Text Color:</strong> #333333 (Dark Gray) - Used for body text</li>
+                <li><strong>Background Color:</strong> #F5F5F5 (Light Gray) - Used for page background</li>
+                <li><strong>Light Color:</strong> #FFFFFF (White) - Used for content backgrounds</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Typography</h2>
+            <p>The selected fonts balance readability with a sense of adventure and exploration:</p>
+            
+            <h3 style="font-family: 'Georgia', 'Times New Roman', serif;">Headings: Georgia / Times New Roman (Serif)</h3>
+            <p>This serif font family provides a classic, trustworthy feel appropriate for headings and important text elements.</p>
+            
+            <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Body Text: Segoe UI / Tahoma / Sans-serif</h3>
+            <p>This sans-serif font family offers excellent readability on screens and creates a clean, modern look for body content.</p>
+            
+            <p><strong>Usage:</strong></p>
+            <ul>
+                <li>All headings (h1-h6) will use the serif font family</li>
+                <li>Body text, navigation, and footer will use the sans-serif font family</li>
+                <li>Special elements or quotes may use alternative fonts for emphasis</li>
+                <li>The GMK logo uses a bold sans-serif font for clear visibility</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Wireframes</h2>
+            <p>Basic layout sketches for the home page:</p>
+            
+            <div class="wireframe-container">
+                <div class="wireframe mobile">
+                    <h3>Mobile View</h3>
+                    <div class="wireframe-box" style="height: 60px; display: flex; align-items: center; padding: 5px;">
+                        <div style="width: 40px; height: 40px; background-color: #2E8B57; color: white; display: flex; align-items: center; justify-content: center; margin-right: 10px; border-radius: 5px;">GMK</div>
+                        <div>Navigation (Menu)</div>
+                    </div>
+                    <div class="wireframe-box" style="height: 200px;">Hero Image with Site Tagline</div>
+                    <div class="wireframe-box" style="height: 150px;">Featured Trail of the Week</div>
+                    <div class="wireframe-box" style="height: 150px;">Latest Gear Review</div>
+                    <div class="wireframe-box" style="height: 150px;">Upcoming Events</div>
+                    <div class="wireframe-box" style="height: 100px;">Newsletter Signup</div>
+                    <div class="wireframe-box" style="height: 80px;">Footer with Social Links</div>
+                </div>
+                
+                <div class="wireframe desktop">
+                    <h3>Desktop View</h3>
+                    <div class="wireframe-box" style="height: 80px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 50px; height: 50px; background-color: #2E8B57; color: white; display: flex; align-items: center; justify-content: center; margin-right: 10px; border-radius: 5px;">GMK</div>
+                                <div>Outdoor Adventure Hub</div>
+                            </div>
+                            <div style="width: 60%;">Navigation Menu</div>
+                        </div>
+                    </div>
+                    <div class="wireframe-box" style="height: 300px;">Hero Image with Search and Call-to-Action</div>
+                    <div style="display: flex;">
+                        <div class="wireframe-box" style="width: 60%; height: 200px;">Featured Content</div>
+                        <div class="wireframe-box" style="width: 38%; height: 200px;">Quick Links & Resources</div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="wireframe-box" style="width: 32%; height: 180px;">Trail Guides</div>
+                        <div class="wireframe-box" style="width: 32%; height: 180px;">Gear Reviews</div>
+                        <div class="wireframe-box" style="width: 32%; height: 180px;">Community</div>
+                    </div>
+                    <div class="wireframe-box" style="height: 120px;">Newsletter & Social Media</div>
+                    <div class="wireframe-box" style="height: 100px;">Footer with Links & Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Website Planning Document - Outdoor Adventure Hub</p>
+        <p>This document uses the selected color schema and typography as specified in the plan.</p>
+    </footer>
+</body>
+</html>
