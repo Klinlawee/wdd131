@@ -57,54 +57,12 @@ const temples = [
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/800x500/kyiv-ukraine-lds-temple-771090-wallpaper.jpg"
     },
     {
-        templeName: "Accra Ghana",
-        location: "Accra, Ghana",
-        dedicated: "2004, January, 11",
-        area: 17500,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/800x500/accra-ghana-temple-detail-249022-2400x1200.jpg"
-    },
-    {
-        templeName: "Salt Lake",
-        location: "Salt Lake City, Utah, United States",
-        dedicated: "1893, April, 6",
-        area: 253000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/800x500/salt-lake-temple-37762.jpg"
-    },
-    {
-        templeName: "Nauvoo Illinois",
-        location: "Nauvoo, Illinois, United States",
-        dedicated: "2002, June, 27",
-        area: 54000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/800x500/nauvoo-temple-756499-wallpaper.jpg"
-    },
-    {
-        templeName: "San Diego California",
-        location: "San Diego, California, United States",
-        dedicated: "1993, April, 25",
-        area: 72000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/800x500/san-diego-temple-765109-wallpaper.jpg"
-    },
-    {
-        templeName: "Manila Philippines",
-        location: "Manila, Philippines",
-        dedicated: "1984, September, 25",
-        area: 26783,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manila-philippines/800x500/manila-philippines-temple-lds-993617-wallpaper.jpg"
-    },
-    {
-        templeName: "London England",
-        location: "London, England, United Kingdom",
-        dedicated: "1958, September, 7",
-        area: 42852,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/london-england/800x500/london-england-temple-lds-650239-wallpaper.jpg"
-    },
-    {
-        templeName: "Paris France",
-        location: "Paris, France",
-        dedicated: "2017, May, 21",
-        area: 44075,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/800x500/paris-france-temple-exterior-1905503.jpg"
-    },
+        templeName: "São Paulo Brazil",
+        location: "São Paulo, Brazil",
+        dedicated: "1978, October, 30",
+        area: 59246,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x225/sao-paulo-brazil-temple-lds-919303-wallpaper.jpg"
+    }
 ];
 
 // DOM elements
