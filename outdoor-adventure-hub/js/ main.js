@@ -1,4 +1,4 @@
-// Wait for the DOM to be fully loaded
+// Main JavaScript - Shared across all pages
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
     const hamburger = document.getElementById('hamburger');
@@ -57,6 +57,19 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
+            }
+        });
+    });
+
+    // Newsletter signup for all pages
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.form-control').value;
+            if (email.trim()) {
+                alert(`Thank you for subscribing with: ${email}`);
+                this.reset();
             }
         });
     });

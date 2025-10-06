@@ -15,17 +15,6 @@
     margin: 2rem auto 0;
 }
 
-.search-form {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.search-form .form-control {
-    flex: 1;
-    padding: 1rem;
-    font-size: 1.1rem;
-}
-
 .featured-trail {
     background: var(--light-color);
     border-radius: 8px;

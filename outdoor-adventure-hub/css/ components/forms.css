@@ -60,3 +60,15 @@ textarea.form-control {
 .newsletter-form .form-control {
     flex: 1;
 }
+
+/* Search Form */
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-form .form-control {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.1rem;
+}

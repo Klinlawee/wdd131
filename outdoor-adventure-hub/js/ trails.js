@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span><i class="fas fa-mountain"></i> ${trail.elevation} gain</span>
                 </div>
                 <p>${trail.description}</p>
-                <a href="#" class="btn">View Details</a>
+                <a href="#" class="btn btn-primary">View Details</a>
             `;
             trailGrid.appendChild(trailCard);
         });

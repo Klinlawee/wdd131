@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span>${item.price}</span>
                 </div>
                 <p>${item.description}</p>
-                <a href="#" class="btn">Read Review</a>
+                <a href="#" class="btn btn-primary">Read Review</a>
             `;
             gearGrid.appendChild(gearCard);
         });
