@@ -1,0 +1,130 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2E8B57; /* Sea Green */
+    --secondary-color: #1E3A5F; /* Dark Blue */
+    --accent-color: #FF7F50; /* Coral */
+    --text-color: #333333;
+    --background-color: #F5F5F5;
+    --light-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Import Component Styles */
+@import url('components/navigation.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+@import url('components/utilities.css');
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .featured-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        padding: 1rem 0;
+        text-align: center;
+        gap: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-links {
+        margin-top: 2rem;
+    }
+}

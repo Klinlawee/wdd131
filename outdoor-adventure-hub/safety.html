@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety & Preparedness - Alpine Ascents</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional safety-specific styles */
+        .safety-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+        }
+        
+        .emergency-info {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .checklist-item input {
+            margin-right: 1rem;
+            transform: scale(1.2);
+        }
+        
+        .checklist-item.checked {
+            background: var(--accent);
+            text-decoration: line-through;
+        }
+        
+        .checklist-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .safety-tip {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .safety-tip h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar container">
+            <div class="nav-brand">
+                <a href="index.html"><i class="fas fa-mountain"></i> Alpine Ascents</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trails.html">Trail Guides</a></li>
+                <li><a href="gear.html">Gear Reviews</a></li>
+                <li><a href="safety.html" class="active">Safety</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero safety-hero">
+        <div class="hero-content container">
+            <h1>Safety & Preparedness</h1>
+            <p>Your safety is our priority. Learn essential skills, checklists, and protocols to ensure every hike is safe and enjoyable.</p>
+        </div>
+    </section>
+
+    <!-- Emergency Info -->
+    <section class="emergency-info container">
+        <div class="container">
+            <h3><i class="fas fa-exclamation-triangle"></i> Emergency Information</h3>
+            <p><strong>In case of emergency, call 911. For wilderness rescues, provide your exact location using GPS coordinates if possible.</strong></p>
+            <p>Always tell someone your hiking plans and expected return time. Carry a fully charged phone and consider a satellite communicator for remote areas.</p>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section id="safety">
+        <div class="container">
+            <h2>The Ten Essentials Checklist</h2>
+            <p class="text-center mb-3">Use this interactive checklist to ensure you're prepared for your hike. The Ten Essentials are critical safety items that should accompany every hiker.</p>
+            
+            <div class="checklist">
+                <div id="checklist-items">
+                    <!-- Checklist items will be populated by JavaScript -->
+                </div>
+                <div class="checklist-actions">
+                    <button class="btn" id="check-all">Check All Items</button>
+                    <button class="btn" id="uncheck-all">Uncheck All Items</button>
+                    <button class="btn" id="print-checklist">Print Checklist</button>
+                    <button class="btn" id="save-checklist">Save Progress</button>
+                </div>
+            </div>
+            
+            <div class="grid" style="margin-top: 3rem;">
+                <div class="card">
+                    <h3><i class="fas fa-cloud-sun"></i> Weather Preparedness</h3>
+                    <p>Pacific Northwest weather can change rapidly. Always check forecasts for your destination's elevation and prepare for rain, even on sunny days. Carry extra layers and rain gear.</p>
+                    <ul>
+                        <li>Check weather forecasts for trailhead and summit</li>
+                        <li>Prepare for temperature drops at higher elevations</li>
+                        <li>Carry rain gear regardless of forecast</li>
+                        <li>Know signs of hypothermia and heat exhaustion</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-tree"></i> Leave No Trace</h3>
+                    <p>Follow the seven principles of Leave No Trace to minimize your impact on the wilderness and preserve it for future generations.</p>
+                    <ul>
+                        <li>Plan ahead and prepare</li>
+                        <li>Travel and camp on durable surfaces</li>
+                        <li>Dispose of waste properly</li>
+                        <li>Leave what you find</li>
+                        <li>Minimize campfire impacts</li>
+                        <li>Respect wildlife</li>
+                        <li>Be considerate of other visitors</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Wildlife Safety</h3>
+                    <p>Learn how to safely encounter wildlife including bears, cougars, and mountain goats. Carry bear spray where appropriate.</p>
+                    <ul>
+                        <li>Make noise while hiking to avoid surprising animals</li>
+                        <li>Store food properly using bear canisters</li>
+                        <li>Know how to react to bear and cougar encounters</li>
+                        <li>Keep safe distance from all wildlife</li>
+                        <li>Carry bear spray in bear country</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Tips Section -->
+    <section class="featured">
+        <div class="container">
+            <h2>Essential Safety Tips</h2>
+            <div class="safety-tips-grid">
+                <div class="safety-tip">
+                    <h4><i class="fas fa-map-marked-alt"></i> Navigation Skills</h4>
+                    <p>Always carry a map and compass and know how to use them. GPS devices are helpful but can fail. Tell someone your route and expected return time.</p>
+                </div>
+                <div class="safety-tip">
+                    <h4><i class="fas fa-tint"></i> Hydration Management</h4>
+                    <p>Carry more water than you think you'll need. Know water sources along your route and always treat water from natural sources before drinking.</p>
+                </div>
+                <div class="safety-tip">
+                    <h4><i class="fas fa-sun"></i> Sun Protection</h4>
+                    <p>UV exposure increases with elevation. Use sunscreen, wear sunglasses, and consider a hat even on cloudy days. Snow can reflect up to 80% of UV rays.</p>
+                </div>
+                <div class="safety-tip">
+                    <h4><i class="fas fa-hiking"></i> Pace Yourself</h4>
+                    <p>Start early, hike at a comfortable pace, and take regular breaks. The slowest hiker should set the pace. Turn around if you're not making expected progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alpine Ascents</h3>
+                    <p>Your trusted guide to hiking the Pacific Northwest. Discover breathtaking trails, essential gear, and safety tips for your outdoor adventures.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="trails.html">Trail Guides</a>
+                    <a href="gear.html">Gear Reviews</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Safety Alerts</h3>
+                    <p>Subscribe to receive safety alerts and trail condition updates.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                        </div>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year">2024</span> Alpine Ascents. Built as a learning project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/data/trails-data.js"></script>
+    <script src="js/data/gear-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/safety.js"></script>
+</body>
+</html>
