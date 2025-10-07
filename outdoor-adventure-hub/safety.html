@@ -3,43 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safety & Preparedness - Alpine Ascents</title>
+    <title>Safety & Preparedness - Outdoor Adventure Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Additional safety-specific styles */
-        .safety-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
-        }
-        
-        .emergency-info {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 1.5rem;
+        .safety-checklist {
+            background: var(--light-color);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
             margin: 2rem 0;
-            border-radius: 4px;
         }
         
         .checklist-item {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
-            padding: 1rem;
-            background: var(--white);
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
+            padding: 1.2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .checklist-item:hover {
+            transform: translateX(5px);
+            background: #e9ecef;
         }
         
         .checklist-item input {
             margin-right: 1rem;
-            transform: scale(1.2);
+            transform: scale(1.3);
+            accent-color: var(--primary-color);
         }
         
         .checklist-item.checked {
-            background: var(--accent);
+            background: #e8f5e8;
+            border-left-color: var(--accent-color);
             text-decoration: line-through;
+            color: #666;
         }
         
         .checklist-actions {
@@ -51,19 +53,20 @@
         }
         
         .safety-tip {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: var(--light-color);
+            padding: 1.8rem;
+            border-radius: 10px;
             margin-bottom: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--accent-color);
         }
         
         .safety-tip h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
         }
     </style>
 </head>
@@ -71,34 +74,29 @@
     <!-- Navigation -->
     <header>
         <nav class="navbar container">
-            <div class="nav-brand">
-                <a href="index.html"><i class="fas fa-mountain"></i> Alpine Ascents</a>
+            <div class="logo-container">
+                <div class="logo">GMK</div>
+                <div class="brand-text">
+                    <h1>Outdoor Adventure Hub</h1>
+                    <p>Your Gateway to Nature's Wonders</p>
+                </div>
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="trails.html">Trail Guides</a></li>
                 <li><a href="gear.html">Gear Reviews</a></li>
                 <li><a href="safety.html" class="active">Safety</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Community</a></li>
             </ul>
             <button class="hamburger" id="hamburger">☰</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero safety-hero">
+    <section class="hero">
         <div class="hero-content container">
             <h1>Safety & Preparedness</h1>
             <p>Your safety is our priority. Learn essential skills, checklists, and protocols to ensure every hike is safe and enjoyable.</p>
-        </div>
-    </section>
-
-    <!-- Emergency Info -->
-    <section class="emergency-info container">
-        <div class="container">
-            <h3><i class="fas fa-exclamation-triangle"></i> Emergency Information</h3>
-            <p><strong>In case of emergency, call 911. For wilderness rescues, provide your exact location using GPS coordinates if possible.</strong></p>
-            <p>Always tell someone your hiking plans and expected return time. Carry a fully charged phone and consider a satellite communicator for remote areas.</p>
         </div>
     </section>
 
@@ -108,7 +106,7 @@
             <h2>The Ten Essentials Checklist</h2>
             <p class="text-center mb-3">Use this interactive checklist to ensure you're prepared for your hike. The Ten Essentials are critical safety items that should accompany every hiker.</p>
             
-            <div class="checklist">
+            <div class="safety-checklist">
                 <div id="checklist-items">
                     <!-- Checklist items will be populated by JavaScript -->
                 </div>
@@ -123,12 +121,11 @@
             <div class="grid" style="margin-top: 3rem;">
                 <div class="card">
                     <h3><i class="fas fa-cloud-sun"></i> Weather Preparedness</h3>
-                    <p>Pacific Northwest weather can change rapidly. Always check forecasts for your destination's elevation and prepare for rain, even on sunny days. Carry extra layers and rain gear.</p>
+                    <p>Pacific Northwest weather can change rapidly. Always check forecasts for your destination's elevation and prepare for rain, even on sunny days.</p>
                     <ul>
                         <li>Check weather forecasts for trailhead and summit</li>
                         <li>Prepare for temperature drops at higher elevations</li>
                         <li>Carry rain gear regardless of forecast</li>
-                        <li>Know signs of hypothermia and heat exhaustion</li>
                     </ul>
                 </div>
                 <div class="card">
@@ -139,9 +136,6 @@
                         <li>Travel and camp on durable surfaces</li>
                         <li>Dispose of waste properly</li>
                         <li>Leave what you find</li>
-                        <li>Minimize campfire impacts</li>
-                        <li>Respect wildlife</li>
-                        <li>Be considerate of other visitors</li>
                     </ul>
                 </div>
                 <div class="card">
@@ -151,8 +145,6 @@
                         <li>Make noise while hiking to avoid surprising animals</li>
                         <li>Store food properly using bear canisters</li>
                         <li>Know how to react to bear and cougar encounters</li>
-                        <li>Keep safe distance from all wildlife</li>
-                        <li>Carry bear spray in bear country</li>
                     </ul>
                 </div>
             </div>
@@ -189,8 +181,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Alpine Ascents</h3>
-                    <p>Your trusted guide to hiking the Pacific Northwest. Discover breathtaking trails, essential gear, and safety tips for your outdoor adventures.</p>
+                    <h3>Outdoor Adventure Hub</h3>
+                    <p>Your trusted guide to outdoor adventures in the Pacific Northwest and beyond.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -204,21 +196,19 @@
                     <a href="trails.html">Trail Guides</a>
                     <a href="gear.html">Gear Reviews</a>
                     <a href="safety.html">Safety</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">Community</a>
                 </div>
                 <div class="footer-section">
                     <h3>Safety Alerts</h3>
                     <p>Subscribe to receive safety alerts and trail condition updates.</p>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your email address" required>
-                        </div>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
                         <button type="submit" class="btn">Subscribe</button>
                     </form>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; <span id="current-year">2024</span> Alpine Ascents. Built as a learning project.</p>
+                <p>&copy; <span id="current-year">2024</span> Outdoor Adventure Hub. Built as a learning project.</p>
             </div>
         </div>
     </footer>
