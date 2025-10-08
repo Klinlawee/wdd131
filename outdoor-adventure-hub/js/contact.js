@@ -50,31 +50,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.style.borderColor = '';
             });
         });
-        
-        // Show/hide hike-related fields based on subject
-        const subjectSelect = document.getElementById('subject');
-        const hikeDateField = document.getElementById('hike-date')?.parentElement;
-        const trailNameField = document.getElementById('trail-name')?.parentElement;
-        
-        if (subjectSelect && hikeDateField && trailNameField) {
-            subjectSelect.addEventListener('change', function() {
-                if (this.value === 'trail-report') {
-                    hikeDateField.style.display = 'block';
-                    trailNameField.style.display = 'block';
-                } else {
-                    hikeDateField.style.display = 'none';
-                    trailNameField.style.display = 'none';
-                }
-            });
-            
-            // Trigger change event to set initial state
-            subjectSelect.dispatchEvent(new Event('change'));
-        }
-    }
-    
-    // Auto-fill current date for hike date
-    const hikeDateField = document.getElementById('hike-date');
-    if (hikeDateField) {
-        hikeDateField.valueAsDate = new Date();
     }
 });

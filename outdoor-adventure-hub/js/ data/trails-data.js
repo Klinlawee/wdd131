@@ -61,17 +61,3 @@ const trails = [
         description: "Family-friendly hike to a beautiful waterfall along the South Fork Snoqualmie River."
     }
 ];
-
-// Ten Essentials Checklist
-const checklistItems = [
-    "Navigation (map, compass, GPS)",
-    "Headlamp/Flashlight (with extra batteries)",
-    "Sun Protection (sunglasses, sunscreen, hat)",
-    "First Aid Kit",
-    "Knife/Multi-tool",
-    "Fire (waterproof matches/lighter)",
-    "Emergency Shelter (tent, tarp, bivy)",
-    "Extra Food (beyond minimum expectations)",
-    "Extra Water (or means to purify water)",
-    "Extra Clothes (appropriate for weather)"
-];
